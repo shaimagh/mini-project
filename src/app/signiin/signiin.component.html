@@ -1,0 +1,80 @@
+<header class="bg-secondary py-5">
+  <div class="container px-4 px-lg-5 my-2">
+      <div class="text-center text-white">
+          <h1 class="display-4 fw-bolder">créer compte</h1>
+      </div>
+  </div>
+</header>
+<div class="registration-form">
+    <form class="was-validated">
+      <h1 style="text-align: center">Créer Compte</h1>
+      <hr />
+      <p>Vous avez déja un compte ? <a href="#">Connectez-vous</a></p>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" name="genre" type="radio" required />
+        <label class="form-check-label">M</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" name="genre" type="radio" required/>
+        <label class="form-check-label">Mme</label>
+      </div>
+      <div class="form-group" style="margin-top: 14px">
+        <input
+          type="text"
+          class="form-control item"
+          id="Prenom"
+          placeholder="Prenom"
+          required
+        />
+        <div class="valid-feedback">validee</div>
+        <div class="invalid-feedback">champ obligatoire</div>
+      </div>
+      <div class="form-group" style="margin-top: 14px">
+        <input type="text" class="form-control item" id="Nom" placeholder="Nom" required/>
+        <div class="valid-feedback">validee</div>
+        <div class="invalid-feedback">champ obligatoire</div>
+      </div>
+  
+      <div class="form-group">
+        <input
+          type="email"
+          class="form-control item"
+          id="email"
+          placeholder="Email"
+          required
+        />
+        <div class="valid-feedback">validee</div>
+                     <div class="invalid-feedback">champ obligatoire </div>
+                     <div class="invalid-feedback">respectez la forme adrese@domaine</div>
+      </div>
+      <div class="form-group">
+        <input
+          type="password"
+          class="form-control item"
+          id="Mot de passe"
+          placeholder="Mot de passe"
+          required
+        />
+        <div class="valid-feedback">validee</div>
+        <div class="invalid-feedback">champ obligatoire </div>
+      </div>
+  
+      <div class="form-group">
+        <input
+          type="date"
+          class="form-control item"
+          id="birth-date"
+          placeholder="Birth Date"
+          required
+        />
+        <div class="valid-feedback">validee</div>
+        <div class="invalid-feedback">champ obligatoire </div>
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-block create-account">
+          Create Account
+        </button>
+      </div>
+    </form>
+  </div>
+  
