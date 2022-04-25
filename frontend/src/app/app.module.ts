@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +22,7 @@ import { ConfiCmdComponent } from './confi-cmd/confi-cmd.component';
 import { PaimentComponent } from './paiment/paiment.component';
 import { InformationComponent } from './information/information.component';
 
-import { FormsModule } from '@angular/forms';
+//import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -41,12 +43,15 @@ import { FormsModule } from '@angular/forms';
     ConfiCmdComponent,
     PaimentComponent,
     InformationComponent,
-    
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

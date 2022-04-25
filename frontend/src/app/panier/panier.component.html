@@ -1,79 +1,56 @@
+<header class="bg-secondary py-5">
+  <div class="container px-4 px-lg-5 my-2">
+    <div class="text-center text-white">
+      <h1 class="display-4 fw-bolder">panier</h1>
+    </div>
+  </div>
+</header>
+<div class="row">
+  <div class="col-md-8 cart">
+    <div class="title">
+      <div class="row">
+        <div class="col">
+          <h4><b>panier</b></h4>
+        </div>
+        <div class="col align-self-center text-right text-muted"></div>
+      </div>
+    </div>
+    <div class="row border-top border-bottom" *ngFor="let element of produit">
+      <div class="row main align-items-center">
+        <div class="col-2"><img class="img-fluid" src="{{element.idimage}}"></div>
+        <div class="col">
+          <div class="row text-muted">{{element.nomproduit}}</div>
+          <div class="row">Cotton T-shirt</div>
+        </div>
+        <div class="col"><a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a></div>
+        <div class="col"> {{element.prix}} dt  <span class="delete"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                       height="16" fill="currentColor"
+                                                                       class="bi bi-trash-fill" viewBox="0 0 16 16">
+                        <path
+                          d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                      </svg></span></div>
+      </div>
+    </div>
+    <button class="btn btn-outline-danger" (click)="clearCart()" >Vider Panier</button>
 
-   
-  <header class="bg-secondary py-5">
-    <div class="container px-4 px-lg-5 my-2">
-        <div class="text-center text-white">
-            <h1 class="display-4 fw-bolder">panier</h1>
-        </div>
+    <div class="back-to-shop"><a href="#">&leftarrow;<span class="text-muted">returner au acceuil</span></a></div>
+  </div>
+  <div class="col-md-4 total">
+    <div>
+      <h5><b>total</b></h5>
     </div>
-  </header>
-   <div class="row">
-        <div class="col-md-8 cart">
-            <div class="title">
-                <div class="row">
-                    <div class="col">
-                        <h4><b>panier</b></h4>
-                    </div>
-                    <div class="col align-self-center text-right text-muted">3 article</div>
-                </div>
-            </div>
-            <div class="row border-top border-bottom">
-                <div class="row main align-items-center">
-                    <div class="col-2"><img class="img-fluid" src="https://i.imgur.com/1GrakTl.jpg"></div>
-                    <div class="col">
-                        <div class="row text-muted">Shirt</div>
-                        <div class="row">Cotton T-shirt</div>
-                    </div>
-                    <div class="col"> <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a> </div>
-                    <div class="col"> 44.00 dt   <span class="delete"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
-                        <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
-                      </svg></span></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="row main align-items-center">
-                    <div class="col-2"><img class="img-fluid" src="https://i.imgur.com/ba3tvGm.jpg"></div>
-                    <div class="col">
-                        <div class="row text-muted">Shirt</div>
-                        <div class="row">Cotton T-shirt</div>
-                    </div>
-                    <div class="col"> <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a> </div>
-                    <div class="col">44.00 dt  <span class="delete"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
-                        <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
-                      </svg></span></div>
-                </div>
-            </div>
-            <div class="row border-top border-bottom">
-                <div class="row main align-items-center">
-                    <div class="col-2"><img class="img-fluid" src="https://i.imgur.com/pHQ3xT3.jpg"></div>
-                    <div class="col">
-                        <div class="row text-muted">Shirt</div>
-                        <div class="row">Cotton T-shirt</div>
-                    </div>
-                    <div class="col"> <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a> </div>
-                    <div class="col"> 44.00dt  <span class="delete"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
-                        <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
-                      </svg></span></div>
-                </div>
-            </div>
-            <div class="back-to-shop"><a href="#">&leftarrow;<span class="text-muted">returner au acceuil</span></a></div>
-        </div>
-        <div class="col-md-4 total">
-            <div>
-                <h5><b>total</b></h5>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="col" style="padding-left:0;">3 articles</div>
-                <div class="col text-right">132.00 dt </div>
-            </div>
-            <form>
-                
-                <p>CODE PROMO</p> <input id="code" placeholder="Enter your code">
-            </form>
-            <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
-                <div class="col">prix total</div>
-                <div class="col text-right"> 137.00 dt </div>
-            </div> <a href="/confir-cmd"><button class="btn">commander</button></a>
-        </div>
+    <hr>
+
+    <form>
+
+      <p>CODE PROMO</p> <input id="code" placeholder="Enter your code">
+    </form>
+    <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+      <div class="col">prix total</div>
+      <div class="col text-right"> {{total}} dt</div>
     </div>
+    <a href="/paiment">
+      <button class="btn">commander</button>
+    </a>
+  </div>
+</div>

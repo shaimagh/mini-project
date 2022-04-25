@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class PaimentComponent implements OnInit {
 
   constructor() { }
+  affiche(){
+    alert("félicitations!!!!    Paiement Accepté");
+
+  }
 
   ngOnInit(): void {
   }
